@@ -5,13 +5,13 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Data
-@Entity(name="rooms")
+@Entity(name = "rooms")
 @Table(name = "rooms")
 public class Room {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
     private String name;
     private Integer price;
     private Boolean wifi;
@@ -25,7 +25,5 @@ public class Room {
 
     @Column(name = "room_count")
     private Integer roomCount;
-
-
 
 }

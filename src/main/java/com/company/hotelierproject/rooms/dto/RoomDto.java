@@ -12,4 +12,5 @@ public class RoomDto {
     private Integer bathCount;
     private Integer roomCount;
     private Double rate;
+
 }
