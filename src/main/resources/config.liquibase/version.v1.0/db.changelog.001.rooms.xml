@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="rooms.001" author="Sahar Maharramova">
+
+        <createTable schemaName="sahar" tableName="rooms">
+            <column name="id" type="number(12)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="bath_count" type="number(12)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="bed_count" type="number(12)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="varchar2(1000)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price" type="number(12)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rate" type="number(12)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="room_count" type="number(12)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="adult_count" type="number(12)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="child_count" type="number(12)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="wifi" type="number(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="state" type="number(4)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+
+    </changeSet>
+
+</databaseChangeLog>

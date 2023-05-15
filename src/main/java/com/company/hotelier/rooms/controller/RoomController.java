@@ -1,23 +1,31 @@
-package com.company.hotelierproject.rooms.controller;
+package com.company.hotelier.rooms.controller;
 
-import com.company.hotelierproject.rooms.dto.RoomDto;
-import com.company.hotelierproject.rooms.service.RoomService;
+import com.company.hotelier.rooms.dto.RoomDto;
+import com.company.hotelier.rooms.dto.request.RoomFilter;
+import com.company.hotelier.rooms.service.RoomService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
 @RequestMapping("/rooms")
 @RequiredArgsConstructor
+@Validated
 public class RoomController {
 
     private final RoomService roomService;
 
-    @GetMapping
-    public List<RoomDto> getAll() {
-        return roomService.getAll();
+    @GetMapping("/page/{page}/size/{size}")
+    public List<RoomDto> getAll(@PathVariable Integer page,
+                                @PathVariable Integer size,
+                                @RequestParam(required = false) String field,
+                                @Valid RoomFilter roomFilter) {
+        return roomService.getAll(page, size, field, roomFilter);
     }
+
 
     @GetMapping("/{id}")
     public RoomDto findById(@PathVariable Long id) {

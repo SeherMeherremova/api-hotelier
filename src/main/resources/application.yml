@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    root: WARN
+    com.company.hotelier: INFO
+
+spring:
+  application:
+    name: api-hotelier
+  datasource:
+    url: "jdbc:oracle:thin:@//localhost:1521/ORCL"
+    username: "sahar"
+    password: "sahar2000"
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  jpa:
+    show-sql: true
+    database: oracle
+    hibernate.ddl-auto: validate
+  liquibase:
+    change-log: classpath:config.liquibase/db.changelog-master.xml
+    enabled: false
+
