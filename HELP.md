@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.company.hotelier-project' is invalid and this project uses 'com.company.hotelierproject' instead.
+* The original package name 'com.company.hotelier-project' is invalid and this project uses 'com.company.hotelier' instead.
 
 # Getting Started
 

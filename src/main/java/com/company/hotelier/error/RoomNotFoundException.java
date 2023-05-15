@@ -1,4 +1,4 @@
-package com.company.hotelierproject.rooms.error;
+package com.company.hotelier.error;
 
 public class RoomNotFoundException extends RuntimeException {
 

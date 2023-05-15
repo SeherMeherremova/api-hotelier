@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="staffs.001" author="Sahar Maharramova">
+
+        <createTable schemaName="sahar" tableName="staffs">
+            <column name="id" type="number(12)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="varchar2(1000)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="instagram" type="varchar2(1000)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="twitter" type="varchar2(1000)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="fb_account" type="varchar2(1000)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+    </changeSet>
+
+</databaseChangeLog>

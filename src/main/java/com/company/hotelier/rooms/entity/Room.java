@@ -1,10 +1,15 @@
-package com.company.hotelierproject.rooms.entity;
+package com.company.hotelier.rooms.entity;
 
+import com.company.hotelier.rooms.model.RoomState;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity(name = "rooms")
 @Table(name = "rooms")
 public class Room {
@@ -16,6 +21,13 @@ public class Room {
     private Integer price;
     private Boolean wifi;
     private Double rate;
+    private Integer state;
+
+    @Column(name = "adult_count")
+    private Integer adultCount;
+
+    @Column(name = "child_count")
+    private Integer childCount;
 
     @Column(name = "bed_count")
     private Integer bedCount;
